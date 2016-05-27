@@ -44,6 +44,7 @@ public class GatoTabla extends javax.swing.JFrame {
         turno = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Juego el Gato");
 
         uno.setFont(new java.awt.Font("Tahoma", 3, 48)); // NOI18N
         uno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -263,17 +264,17 @@ public class GatoTabla extends javax.swing.JFrame {
     
     public void Evaluar(TurnoMaquina m){
         if(m.evaluar(this)==-1) {
-                JOptionPane.showMessageDialog(this, "Increible!!! Usted gana la partida!"); 
+                JOptionPane.showMessageDialog(this, "HAs Ganado"); 
                 nuevoJuego();
                 llenadoTabla();
             }
             else if(m.evaluar(this)==1) {
-                JOptionPane.showMessageDialog(this, "La computadora gana!! "); 
+                JOptionPane.showMessageDialog(this, "La computadora gana"); 
                 nuevoJuego();
                 llenadoTabla();
             }
             else if(m.evaluar(this)==0) {
-                JOptionPane.showMessageDialog(this, "Felicidades! Logró empatar :D"); 
+                JOptionPane.showMessageDialog(this, "Ha sido un empate"); 
                 nuevoJuego();
                 llenadoTabla();
             }
